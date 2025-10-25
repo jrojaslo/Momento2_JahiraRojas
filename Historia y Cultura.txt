@@ -1,5 +1,3 @@
-Claro, mira, aquí te va la versión sin rodeos.
-
 ### ¿Qué es la Historia?
 
 No pienses en la historia solo como la clase aburrida donde memorizas fechas y nombres de reyes muertos.
@@ -41,4 +39,5 @@ En resumen: **La cultura es el conjunto de todo lo que creamos, compartimos y cr
 ### La conexión rápida:
 
 **Historia** es el diario de lo que nos pasó.
+
 **Cultura** es la personalidad que desarrollamos por todo eso que nos pasó.
