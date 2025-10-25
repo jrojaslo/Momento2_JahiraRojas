@@ -1,0 +1,113 @@
+/* --- Reseteo Básico y Fuentes --- */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+    background-color: #f4f4f4; /* Color de fondo suave */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante para títulos */
+    font-weight: 700;
+    color: #2c3e50; /* Color oscuro para títulos */
+}
+
+/* --- Cabecera --- */
+.main-header {
+    background-color: #34495e; /* Fondo azul oscuro para la cabecera */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- Contenido Principal del Blog --- */
+.container {
+    max-width: 900px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrado */
+    padding: 0 1.5rem;
+}
+
+.post {
+    background-color: #ffffff; /* Fondo blanco para los artículos */
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.post h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    border-bottom: 3px solid #3498db; /* Línea azul bajo el título */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.post p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.styled-list {
+    list-style-type: '✅'; /* Un estilo de viñeta más dinámico */
+    padding-left: 2rem;
+}
+
+.styled-list li {
+    padding-left: 0.8rem;
+    margin-bottom: 0.7rem;
+}
+
+/* --- Separador --- */
+.separator {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 3rem 0;
+}
+
+
+.summary {
+    background-color: #ecf0f1; /* Fondo gris claro para el resumen */
+    border-left: 5px solid #3498db; /* Barra lateral azul */
+    padding: 16px;
+    margin-top: 24px;
+    border-radius: 0 5px 5px 0;
+    font-style: italic;
+}
+
+/* Clase que añadirá JavaScript para mostrar el resumen */
+.summary.show {
+    display: block;
+}
+
+/* --- Pie de Página --- */
+.main-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    background-color: #333;
+    color: #aaa;
+    font-size: 0.9rem;
+}
