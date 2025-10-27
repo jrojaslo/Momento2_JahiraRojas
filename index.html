@@ -1,75 +1,573 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog: ¿Qué es la Historia y la Cultura?</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historia & Cultura</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Historia & Cultura</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" onclick="showPage('inicio')"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('historia')"
+                >Historia</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('civilizaciones')"
+                >Civilizaciones</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('arte')"
+                >Arte y Cultura</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('patrimonio')"
+                >Patrimonio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('galeria')"
+                >Galería</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showPage('contacto')"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="pageContent"></div>
 
-    <header class="main-header">
-        <h1>Explorando la Historia y la Cultura</h1>
-        <p>Una explicación sencilla de dos conceptos clave.</p>
-    </header>
+    <!-- <div class="container">
+      <h1 class="text-center mt-5">Viaje a través del tiempo</h1>
+      <p class="lead text-center">
+        Descubra las historias, las personas y los eventos que dieron forma a
+        nuestro mundo y continúan influyendo en nuestras vidas hoy.
+      </p>
+      <div class="text-center">
+        <a href="#"></a>
+        <button class="btn btn-primary">Que comience el viaje!</button>
+      </div>
+    </div> -->
 
-    <main class="container">
-        
-        <article class="post">
-            <h2>¿Qué es la Historia?</h2>
-            <img src="/history.png" alt="Ilustración collage de personas que evoca situaciones y/o momentos en la historia de la humanidad." class="post-image">
-            
-            <p>No pienses en la historia solo como la clase aburrida donde memorizas fechas y nombres de reyes muertos.</p>
-            <p>Piénsalo así: la <strong>historia</strong> es el "story mode" de la humanidad.</p>
-            <p>Es, literalmente, el registro de todo lo que ha pasado. Es el "porqué" de todo lo que ves a tu alrededor.</p>
-            
-            <ul class="styled-list">
-                <li>¿Por qué hablamos el idioma que hablamos y no otro? <strong>Historia.</strong></li>
-                <li>¿Por qué tu país tiene las fronteras que tiene? <strong>Historia.</strong></li>
-                <li>¿Por qué existen ciertas tensiones entre países o por qué algunas tecnologías (como tu smartphone) existen? <strong>Historia.</strong></li>
-            </ul>
-            
-            <p>No se trata solo de batallas y política; se trata de las decisiones, los errores, los inventos, las revoluciones y las ideas que la gente tuvo antes que nosotros.</p>
-                        
-            <p class="summary">
-                <strong>En resumen:</strong> La historia es el contexto que explica por qué tu presente es como es. Estudiarla es entender de dónde venimos para no cometer los mismos errores y saber quiénes somos.
-            </p>
-        </article>
-
-        <hr class="separator">
-
-        <article class="post">
-            <h2>¿Qué es la Cultura?</h2>
-            <img src="/culture.jpg" alt="Ilustración de personas reales y diversas compartiendo en un festival cultural." class="post-image">
-            
-            <p>Si la historia es el "qué pasó", la <strong>cultura</strong> es el "cómo vivimos".</p>
-            <p>Es, básicamente, la "personalidad" de un grupo de gente. Es el <em>software</em> social que todos compartimos y que nos hace actuar de cierta manera.</p>
-            <p>La cultura no es solo ir a un museo o leer libros viejos. La cultura está <em>en todas partes</em>, todo el tiempo. Es:</p>
-            
-            <ul class="styled-list">
-                <li><strong>La música que escuchas:</strong> El K-pop, el reggaetón, el rap, el rock... todo eso es cultura.</li>
-                <li><strong>Los memes que compartes:</strong> Eso es cultura digital. Es un lenguaje que tu grupo entiende.</li>
-                <li><strong>La forma en que hablamos:</strong> La jerga que usas con tus amigos ("pana", "bro", "literal"), los chistes internos.</li>
-                <li><strong>La comida:</strong> Lo que se come en tu casa en una fiesta, la comida rápida que pides, las tradiciones de Navidad.</li>
-                <li><strong>Lo que creemos:</strong> Nuestros valores, lo que consideramos bueno o malo, nuestras tradiciones, e incluso la forma en que vemos el éxito o la familia.</li>
-            </ul>
-                       
-            <p class="summary" id="summary-cultura">
-                <strong>En resumen:</strong> La cultura es el conjunto de todo lo que creamos, compartimos y creemos. Es lo que nos da identidad y nos hace sentir parte de algo (tu familia, tu ciudad, tu país, tu generación).
-            </p>
-        </article>
-    </main>
-
-    <footer class="main-footer">
-        <p>Blog Básico creado con HTML y CSS.</p>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5><i class="fas fa-landmark"></i> Cultura e Historia</h5>
+            <p>Explorando el pasado para entender el presente</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Enlaces Rápidos</h5>
+            <a href="#" onclick="showPage('inicio')" class="text-white d-block"
+              >Inicio</a
+            >
+            <a
+              href="#"
+              onclick="showPage('historia')"
+              class="text-white d-block"
+              >Historia</a
+            >
+            <a
+              href="#"
+              onclick="showPage('contacto')"
+              class="text-white d-block"
+              >Contacto</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Síguenos</h5>
+            <i class="fab fa-facebook fa-2x mx-2"></i>
+            <i class="fab fa-twitter fa-2x mx-2"></i>
+            <i class="fab fa-instagram fa-2x mx-2"></i>
+          </div>
+        </div>
+        <hr class="bg-light" />
+        <p>&copy; 2025 Cultura e Historia. Todos los derechos reservados.</p>
+      </div>
     </footer>
 
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const pages = {
+        inicio: `
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1>Bienvenido a Cultura e Historia</h1>
+                        <p>Un viaje a través del tiempo y las civilizaciones</p>
+                        <button class="btn btn-primary btn-lg mt-3" onclick="showPage('historia')">
+                            Explorar <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Descubre Nuestro Contenido</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1447727214830-cbcbf097b52c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Historia">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Historia Universal</h5>
+                                        <p class="card-text">Explora los acontecimientos que han moldeado nuestro mundo.</p>
+                                        <button class="btn btn-primary" onclick="showPage('historia')">Leer más</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1608546043931-6c9678ea9feb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Civilizaciones">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Civilizaciones Antiguas</h5>
+                                        <p class="card-text">Conoce las grandes culturas que precedieron nuestra era.</p>
+                                        <button class="btn btn-primary" onclick="showPage('civilizaciones')">Descubrir</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="https://plus.unsplash.com/premium_photo-1661862397518-8e50332b6e97?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Arte">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Arte y Cultura</h5>
+                                        <p class="card-text">Sumérgete en las expresiones artísticas a través del tiempo.</p>
+                                        <button class="btn btn-primary" onclick="showPage('arte')">Explorar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
+        historia: `
+                <div class="content-section page-content">
+                    <div class="container">
+                        <h2 class="section-title">Historia Universal</h2>
+                        <div class="row mb-5">
+                            <div class="col-md-6">
+                                <img src="https://images.unsplash.com/photo-1582034438152-77bc94ffa6ae?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=600" class="img-fluid rounded shadow" alt="Historia">
+                            </div>
+                            <div class="col-md-6">
+                                <h3>La Ciencia del Pasado</h3>
+                                <p class="lead">La historia es mucho más que el estudio de fechas y eventos. Es la disciplina que nos permite comprender cómo el pasado ha configurado el presente.</p>
+                                <p>A través del análisis crítico de fuentes documentales y materiales, los historiadores reconstruyen los procesos sociales, políticos y culturales que han dado forma a nuestra civilización.</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="mb-4">Períodos Históricos</h3>
+                        <div class="timeline-item">
+                            <h5><strong>Prehistoria</strong> (2.5 millones de años - 3300 a.C.)</h5>
+                            <p>El período anterior a la invención de la escritura. Incluye el Paleolítico, Mesolítico, Neolítico y la Edad de los Metales.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5><strong>Edad Antigua</strong> (3300 a.C. - Siglo V d.C.)</h5>
+                            <p>Surgimiento de las primeras civilizaciones: Mesopotamia, Egipto, Grecia y Roma. Desarrollo de la escritura y los primeros Estados.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5><strong>Edad Media</strong> (Siglo V - Siglo XV)</h5>
+                            <p>Período del feudalismo en Europa, predominio de la Iglesia Católica y desarrollo de las ciudades medievales.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5><strong>Edad Moderna</strong> (Siglo XV - Siglo XVIII)</h5>
+                            <p>Era de los descubrimientos, Renacimiento, Reforma Protestante y Revolución Científica.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5><strong>Edad Contemporánea</strong> (1789 - Presente)</h5>
+                            <p>Revoluciones industriales y liberales, guerras mundiales, Guerra Fría y globalización.</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+        civilizaciones: `
+                <div class="content-section page-content">
+                    <div class="container">
+                        <h2 class="section-title">Civilizaciones Antiguas</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1608546043931-6c9678ea9feb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=500" class="card-img-top" alt="Egipto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Antiguo Egipto</h5>
+                                        <p>Una de las civilizaciones más fascinantes de la historia, conocida por sus pirámides, faraones y avances en escritura jeroglífica.</p>
+                                        <ul>
+                                            <li><strong>Período:</strong> 3100 a.C. - 30 a.C.</li>
+                                            <li><strong>Ubicación:</strong> Valle del Nilo</li>
+                                            <li><strong>Legado:</strong> Arquitectura monumental, matemáticas, medicina</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="https://plus.unsplash.com/premium_photo-1661963282607-4c4a07f4266b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=500" class="card-img-top" alt="Roma">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Imperio Romano</h5>
+                                        <p>Una de las civilizaciones más influyentes, que estableció las bases del derecho, la ingeniería y la organización política occidental.</p>
+                                        <ul>
+                                            <li><strong>Período:</strong> 753 a.C. - 476 d.C.</li>
+                                            <li><strong>Ubicación:</strong> Mediterráneo</li>
+                                            <li><strong>Legado:</strong> Derecho romano, latín, arquitectura</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1694725411666-eb24f48935fa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=500" class="card-img-top" alt="Grecia">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Grecia Antigua</h5>
+                                        <p>Cuna de la democracia, la filosofía y las artes. Sus contribuciones intelectuales moldearon el pensamiento occidental.</p>
+                                        <ul>
+                                            <li><strong>Período:</strong> 800 a.C. - 146 a.C.</li>
+                                            <li><strong>Ubicación:</strong> Península Balcánica</li>
+                                            <li><strong>Legado:</strong> Filosofía, democracia, olimpiadas</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1610303309510-8e603e3abcdb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=500" class="card-img-top" alt="Mesopotamia">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mesopotamia</h5>
+                                        <p>La "tierra entre ríos", considerada la cuna de la civilización. Aquí surgió la escritura cuneiforme y las primeras leyes.</p>
+                                        <ul>
+                                            <li><strong>Período:</strong> 3500 a.C. - 539 a.C.</li>
+                                            <li><strong>Ubicación:</strong> Entre los ríos Tigris y Éufrates</li>
+                                            <li><strong>Legado:</strong> Escritura, Código de Hammurabi, astronomía</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
+        arte: `
+                <div class="content-section page-content">
+                    <div class="container">
+                        <h2 class="section-title">Arte y Cultura a Través del Tiempo</h2>
+                        <div class="row mb-5">
+                            <div class="col-md-8">
+                                <h3>La Expresión Humana</h3>
+                                <p class="lead">El arte es el reflejo del alma de cada civilización, una ventana que nos permite comprender los valores, creencias y aspiraciones de las sociedades pasadas.</p>
+                                <p>Desde las pinturas rupestres de las cavernas prehistóricas hasta las obras maestras del Renacimiento y las expresiones contemporáneas, el arte ha sido el medio por el cual la humanidad ha plasmado su visión del mundo, sus miedos, sus esperanzas y su búsqueda de belleza y significado.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1615589484252-c70def71bb4f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400" class="img-fluid rounded shadow" alt="Arte">
+                            </div>
+                        </div>
+                        
+                        <h3 class="mb-4">Movimientos Artísticos Importantes</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-paint-brush"></i> Arte Clásico</h5>
+                                        <p>Las civilizaciones griega y romana establecieron cánones de belleza basados en la proporción, armonía y representación idealizada del ser humano.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-church"></i> Arte Medieval</h5>
+                                        <p>Dominado por la temática religiosa, el arte medieval buscaba elevar el espíritu hacia lo divino a través de catedrales góticas y manuscritos iluminados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-palette"></i> Renacimiento</h5>
+                                        <p>El "renacimiento" del arte clásico en los siglos XV y XVI trajo un enfoque humanista, con maestros como Leonardo da Vinci y Miguel Ángel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-eye"></i> Arte Moderno</h5>
+                                        <p>Desde el Impresionismo hasta el Surrealismo, el arte moderno rompió con las convenciones tradicionales para explorar nuevas formas de expresión.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-4">
+                            <h5><i class="fas fa-info-circle"></i> ¿Sabías que...?</h5>
+                            <p>El arte no solo incluye pintura y escultura. También abarca música, literatura, danza, teatro, arquitectura y, en tiempos modernos, cine y arte digital. Cada forma artística es un testimonio invaluable del pensamiento y sensibilidad de su época.</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+        patrimonio: `
+                <div class="content-section page-content">
+                    <div class="container">
+                        <h2 class="section-title">Patrimonio de la Humanidad</h2>
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <img src="https://images.unsplash.com/photo-1671155281453-b345a0a5922a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1200&h=400&fit=crop" class="img-fluid rounded shadow mb-4" alt="Patrimonio">
+                                <p class="lead">El patrimonio cultural y natural de la humanidad representa los tesoros que debemos preservar para las futuras generaciones. Estos sitios nos conectan con nuestro pasado y nos ayudan a comprender la diversidad de las culturas humanas.</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="mb-4">Sitios Emblemáticos del Patrimonio Mundial</h3>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-landmark text-warning"></i> Machu Picchu</h5>
+                                        <p><strong>Ubicación:</strong> Perú</p>
+                                        <p>Ciudad inca del siglo XV ubicada en lo alto de los Andes. Representa el apogeo de la arquitectura y planificación urbana inca.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-monument text-warning"></i> Pirámides de Giza</h5>
+                                        <p><strong>Ubicación:</strong> Egipto</p>
+                                        <p>Las únicas maravillas del mundo antiguo que permanecen en pie. Testimonio del poder y sofisticación del Antiguo Egipto.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-university text-warning"></i> Acrópolis de Atenas</h5>
+                                        <p><strong>Ubicación:</strong> Grecia</p>
+                                        <p>Símbolo de la antigua Grecia y cuna de la democracia occidental. El Partenón es su edificio más emblemático.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-torii-gate text-warning"></i> Gran Muralla China</h5>
+                                        <p><strong>Ubicación:</strong> China</p>
+                                        <p>Una de las construcciones más impresionantes de la humanidad, con más de 21,000 km de longitud.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-gopuram text-warning"></i> Taj Mahal</h5>
+                                        <p><strong>Ubicación:</strong> India</p>
+                                        <p>Mausoleo de mármol blanco construido en el siglo XVII, considerado la joya del arte musulmán en India.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-archway text-warning"></i> Coliseo Romano</h5>
+                                        <p><strong>Ubicación:</strong> Italia</p>
+                                        <p>El anfiteatro más grande del Imperio Romano, símbolo de la ingeniería y arquitectura romana.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-success mt-4">
+                            <h5><i class="fas fa-globe"></i> Importancia de la Preservación</h5>
+                            <p>La UNESCO reconoce más de 1,100 sitios de Patrimonio Mundial en 167 países. Estos lugares son testimonios irreemplazables de nuestra historia colectiva y deben ser protegidos para que las futuras generaciones puedan conocer y valorar el legado de la humanidad.</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+        galeria: `
+                <div class="content-section page-content">
+                    <div class="container">
+                        <h2 class="section-title">Galería Histórica</h2>
+                        <p class="text-center mb-5 lead">Una colección visual de monumentos y artefactos históricos que han marcado la historia de la humanidad</p>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1635446997009-a1fd4a92dbe6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400&h=300&" class="img-fluid rounded gallery-img" alt="Pirámides" title="Pirámides de Egipto">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1708532380634-142b5e5990fd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400&h=300&fitcrop" class="img-fluid rounded gallery-img" alt="Coliseo" title="Coliseo Romano">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1503152394-c571994fd383?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400&h=300&fitcrop" class="img-fluid rounded gallery-img" alt="Partenón" title="Partenón de Atenas">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://plus.unsplash.com/premium_photo-1694475501155-2f344cea9eb3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400&h=300" class="img-fluid rounded gallery-img" alt="Ruinas" title="Ruinas Antiguas">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://plus.unsplash.com/premium_photo-1664304492320-8359efcaad38?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300" class="img-fluid rounded gallery-img" alt="Arquitectura" title="Arquitectura Histórica">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1750926013451-33a08f74c3ca?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400&h=300&fit=crop" class="img-fluid rounded gallery-img" alt="Arte" title="Arte Clásico">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1568057373189-8bf0cf6179e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400&h=300" class="img-fluid rounded gallery-img" alt="Manuscritos" title="Documentos Históricos">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1508107536691-b1449928187d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400&h=300" class="img-fluid rounded gallery-img" alt="Biblioteca" title="Biblioteca Antigua">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1556230491-853cfb1bf050?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=400&h=300" class="img-fluid rounded gallery-img" alt="Estatuas" title="Escultura Clásica">
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 text-center">
+                            <p class="text-muted"><i class="fas fa-camera"></i> Haz clic en las imágenes para explorar cada detalle de nuestro patrimonio histórico</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+        contacto: `
+                <div class="content-section page-content">
+                    <div class="container">
+                        <h2 class="section-title">Contáctanos</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600&h=400&fit=crop" class="img-fluid rounded shadow mb-4" alt="Contacto">
+                                <h4>¿Tienes preguntas sobre historia y cultura?</h4>
+                                <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                                
+                                <div class="mt-4">
+                                    <h5><i class="fas fa-map-marker-alt text-primary"></i> Dirección</h5>
+                                    <p>Calle de la Historia #123, Centro Cultural</p>
+                                    
+                                    <h5><i class="fas fa-envelope text-primary"></i> Email</h5>
+                                    <p>contacto@culturaehistoria.com</p>
+                                    
+                                    <h5><i class="fas fa-phone text-primary"></i> Teléfono</h5>
+                                    <p>+57 123 456 7890</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card shadow">
+                                    <div class="card-body">
+                                        <h4 class="mb-4">Formulario de Contacto</h4>
+                                        <form id="contactForm" onsubmit="handleSubmit(event)">
+                                            <div class="mb-3">
+                                                <label for="nombre" class="form-label">Nombre Completo *</label>
+                                                <input type="text" class="form-control" id="nombre" name="nombre" required minlength="3" placeholder="Ingresa tu nombre">
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Correo Electrónico *</label>
+                                                <input type="email" class="form-control" id="email" name="email" required placeholder="tu@email.com">
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="telefono" class="form-label">Teléfono</label>
+                                                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="Número de teléfono">
+                                                <small class="text-muted">Formato: solo números (9 dígitos)</small>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="asunto" class="form-label">Asunto *</label>
+                                                <select class="form-select" id="asunto" name="asunto" required>
+                                                    <option value="">Selecciona un asunto</option>
+                                                    <option value="consulta">Consulta General</option>
+                                                    <option value="sugerencia">Sugerencia</option>
+                                                    <option value="colaboracion">Felicitación</option>
+                                                    <option value="otro">Otro</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="mensaje" class="form-label">Mensaje *</label>
+                                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required minlength="10" placeholder="Escribe tu mensaje aquí..."></textarea>
+                                            </div>
+                                            
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="acepto" required>
+                                                <label class="form-check-label" for="acepto">
+                                                    Acepto los términos y condiciones *
+                                                </label>
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-primary w-100">
+                                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                                            </button>
+                                        </form>
+                                        
+                                        <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                                            <i class="fas fa-check-circle"></i> ¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
+      };
 
+      function showPage(pageName) {
+        document.getElementById("pageContent").innerHTML = pages[pageName];
+
+        // Actualizar navegación activa
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+        event.target.classList.add("active");
+
+        // Scroll al inicio
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        const form = document.getElementById("contactForm");
+
+        if (form.checkValidity()) {
+          // Mostrar mensaje de éxito
+          document.getElementById("successMessage").style.display = "block";
+
+          // Limpiar formulario
+          form.reset();
+
+          // Ocultar mensaje después de 5 segundos
+          setTimeout(() => {
+            document.getElementById("successMessage").style.display = "none";
+          }, 5000);
+        }
+      }
+
+      // Cargar página de inicio al cargar el documento
+      document.addEventListener("DOMContentLoaded", function () {
+        showPage("inicio");
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
-
-
-

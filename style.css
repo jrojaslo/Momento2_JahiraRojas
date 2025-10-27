@@ -1,109 +1,168 @@
-/* --- Reseteo Básico y Fuentes --- */
+:root {
+  --primary-color: #8b4513;
+  --secondary-color: #d4af37;
+  --dark-bg: #2c1810;
+  --light-bg: #f5f1e8;
+}
+
 body {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.7;
-    background-color: #f4f4f4; /* Color de fondo suave */
-    color: #333; /* Color de texto principal */
-    margin: 0;
-    padding: 0;
+  font-family: "Georgia", serif;
+  background-color: var(--light-bg);
 }
 
-h1, h2 {
-    font-family: 'Playfair Display', serif; /* Fuente elegante para títulos */
-    font-weight: 700;
-    color: #2c3e50; /* Color oscuro para títulos */
+.navbar {
+  background: linear-gradient(
+    135deg,
+    var(--dark-bg) 0%,
+    var(--primary-color) 100%
+  );
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Cabecera --- */
-.main-header {
-    background-color: #34495e; /* Fondo azul oscuro para la cabecera */
-    color: #ecf0f1;
-    text-align: center;
-    padding: 2.5rem 1rem;
-    margin-bottom: 2rem;
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color) !important;
 }
 
-.main-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    color: #fff;
+.nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s;
+  margin: 0 5px;
 }
 
-.main-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--secondary-color) !important;
+  transform: translateY(-2px);
 }
 
-/* --- Contenido Principal del Blog --- */
-.container {
-    max-width: 900px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centrado */
-    padding: 0 1.5rem;
+.hero-section {
+  position: relative;
+  height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://quotewords.com/wp-content/uploads/30796-travel-quotes.jpg")
+      center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
 
-.post {
-    background-color: #ffffff; /* Fondo blanco para los artículos */
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
-.post-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Bordes redondeados para la imagen */
-    margin-bottom: 1.5rem;
-    object-fit: cover;
+.hero-content p {
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.post h2 {
-    font-size: 2.2rem;
-    margin-top: 0;
-    border-bottom: 3px solid #3498db; /* Línea azul bajo el título */
-    padding-bottom: 0.5rem;
-    display: inline-block;
+.content-section {
+  padding: 60px 0;
 }
 
-.post p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+.section-title {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
 }
 
-.styled-list {
-    list-style-type: '✅'; /* Un estilo de viñeta más dinámico */
-    padding-left: 2rem;
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--secondary-color);
 }
 
-.styled-list li {
-    padding-left: 0.8rem;
-    margin-bottom: 0.7rem;
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin-bottom: 30px;
 }
 
-/* --- Separador --- */
-.separator {
-    border: 0;
-    height: 1px;
-    background: #ddd;
-    margin: 3rem 0;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
-.summary {
-    background-color: #ecf0f1; /* Fondo gris claro para el resumen */
-    border-left: 5px solid #3498db; /* Barra lateral azul */
-    padding: 16px;
-    margin-top: 24px;
-    border-radius: 0 5px 5px 0;
-    font-style: italic;
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
 }
 
-/* --- Pie de Página --- */
-.main-footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 2rem;
-    background-color: #333;
-    color: #aaa;
-    font-size: 0.9rem;
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s;
+}
 
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--dark-bg);
+}
+
+footer {
+  background: var(--dark-bg);
+  color: white;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+.page-content {
+  min-height: 400px;
+}
+
+.timeline-item {
+  border-left: 3px solid var(--secondary-color);
+  padding-left: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+}
+
+.form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+.gallery-img {
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 992px) {
+  .rounded-lg-3 {
+    border-radius: 0.3rem;
+  }
 }
